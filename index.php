@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once __DIR__ . '/includes/db_connect.php';
+require_once __DIR__ . '/includes/auth_session.php';
 // ... (Your database connection file, if needed on this page before header) ...
 
 // ===============================================

@@ -1,0 +1,33 @@
+[package]
+name = "wedding-planner"
+version = "1.0.0"
+description = "Wedding Planner Management System deployed with Wasmer"
+
+[dependencies]
+php = ">=8.2"
+
+[[command]]
+name = "web"
+module = "php"
+exec = "index.php"
+
+[fs]
+include = [
+  "index.php",
+  "about.php",
+  "gallery.php",
+  "services.php",
+  "contact.php",
+  "booking.php",
+  "login.php",
+  "register.php",
+  "logout.php",
+  "dashboard.php",
+  "process/",
+  "includes/",
+  "admin/",
+  "assets/",
+  "templates/",
+  "database/",
+  "logs/",
+]
