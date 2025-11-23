@@ -1,19 +1,22 @@
 <?php
-// Database connection settings with env overrides for hosted deployments
-$servername = getenv('DB_HOST') ?: 'localhost';
-$username   = getenv('DB_USER') ?: 'root';      // Default XAMPP username
-$password   = getenv('DB_PASS') ?: '';          // Default XAMPP password is empty
-$database   = getenv('DB_NAME') ?: 'wedding_planner';
-$dbPort     = (int) (getenv('DB_PORT') ?: 3306);
+// Database configuration
+$DB_HOST = '127.0.0.1'; // Use 127.0.0.1 instead of localhost
+$DB_USER = 'root';       // Your MySQL username
+$DB_PASS = '';           // Your MySQL password
+$DB_NAME = 'wedding_planner';
+$DB_PORT = 3306;         // Default MySQL port
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database, $dbPort);
+$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
 
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Optional: uncomment for debugging connection success
-// echo "Database connected successfully!";
+// Optional: set charset
+mysqli_set_charset($conn, "utf8mb4");
+
+// Success message (can remove later)
+# echo "Connected successfully";
 ?>
