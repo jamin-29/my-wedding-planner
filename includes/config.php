@@ -5,6 +5,7 @@ define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
 define('DB_USER', getenv('DB_USER') ?: 'root');
 define('DB_PASS', getenv('DB_PASS') ?: '');
 define('DB_NAME', getenv('DB_NAME') ?: 'wedding_planner');
+define('DB_PORT', getenv('DB_PORT') ?: 3306);
 
 // Optionally set site name, email
 define('SITE_NAME', 'Wedding Planner');
